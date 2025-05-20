@@ -21,8 +21,8 @@
       "esnext"
     ],
     "types": [
-      "vite/client",
-      "@intlify/vite-plugin-vue-i18n/client"
+      "@intlify/vite-plugin-vue-i18n/client",
+      "node"
     ]
   },
   "include": [

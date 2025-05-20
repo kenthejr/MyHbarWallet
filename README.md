@@ -26,6 +26,80 @@ transfer hbars, and so much more.
 
 -   <img width="16" src="./src/assets/clock.svg">&nbsp;&nbsp;**Hedera™ Staking**. Stake your Hbar to Nodes or Accounts and earn rewards; see rewards calculations for the current staking period. **Not Yet Supported for Ledger™ Hardware Wallets**
 
+## Setup and Running
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- pnpm (v6 or higher)
+- Git
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/hashgraph/myhbarwallet.git
+cd myhbarwallet
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+```
+
+### Development
+
+To run the development server:
+
+```bash
+pnpm dev
+```
+
+This will start the development server at `http://localhost:5173`
+
+### Building for Production
+
+To build the web application:
+
+```bash
+pnpm build
+```
+
+The built files will be in the `dist/web` directory.
+
+### Building for Desktop (Electron)
+
+To build the desktop application:
+
+```bash
+pnpm electron:build
+```
+
+This will create the desktop application in the `dist/electron` directory.
+
+### Running Tests
+
+Run end-to-end tests:
+```bash
+pnpm test:e2e:run
+```
+
+Run unit tests:
+```bash
+pnpm test:unit:run
+```
+
+### Available Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm electron:dev` - Run desktop app in development mode
+- `pnpm electron:build` - Build desktop application
+- `pnpm test:e2e:run` - Run end-to-end tests
+- `pnpm test:unit:run` - Run unit tests
+- `pnpm fmt` - Format code with ESLint
+- `pnpm check:types` - Check TypeScript types
+
 ## License
 
 Copyright 2022 Hedera Hashgraph LLC.

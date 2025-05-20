@@ -87,6 +87,7 @@ export default async function ({ mode }) {
         },
         build: {
             outDir: isElectron ? electronOutDir : webOutDir,
+            target: 'es2020',
         },
     });
 }

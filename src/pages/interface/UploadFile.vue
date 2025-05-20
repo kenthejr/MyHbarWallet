@@ -32,20 +32,24 @@
       @close="closeFeeModal"
     >
       <div class="table-fixed text-left p-4">
-        <tr>
-          <td class="w-40">
-            {{ $t('InterfaceTransactionDetails.operator') }}
-          </td>
-          <td>{{ accountId }}</td>
-        </tr>
-        <tr>
-          <td>{{ $t('InterfaceUploadFile.modal.totalChunks') }}</td>
-          <td>{{ state.uploadProgress.totalChunks }}</td>
-        </tr>
-        <tr>
-          <td><strong>{{ $t('InterfaceUploadFile.modal.estimate') }}</strong></td>
-          <td><strong>{{ state.estimateFee }}</strong></td>
-        </tr>
+        <table class="w-full">
+          <tbody>
+            <tr>
+              <td class="w-40">
+                {{ $t('InterfaceTransactionDetails.operator') }}
+              </td>
+              <td>{{ accountId }}</td>
+            </tr>
+            <tr>
+              <td>{{ $t('InterfaceUploadFile.modal.totalChunks') }}</td>
+              <td>{{ state.uploadProgress.totalChunks }}</td>
+            </tr>
+            <tr>
+              <td><strong>{{ $t('InterfaceUploadFile.modal.estimate') }}</strong></td>
+              <td><strong>{{ state.estimateFee }}</strong></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div>

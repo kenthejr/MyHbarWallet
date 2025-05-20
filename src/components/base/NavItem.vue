@@ -63,9 +63,17 @@ export default defineComponent({
         return false;
       }
 
-      return props.to != null
-        ? useLink({ to: props.to }).isActive.value
-        : false;
+      if (props.to == null) {
+        return false;
+      }
+
+      try {
+        const link = useLink({ to: props.to });
+        return link.isActive.value;
+      } catch (error) {
+        console.warn('Router link not available:', error);
+        return false;
+      }
     });
 
     function mouseOver() {

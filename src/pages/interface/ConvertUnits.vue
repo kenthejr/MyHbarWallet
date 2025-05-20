@@ -66,37 +66,42 @@
       </div>
 
       <div class="table w-full">
-        <tr class="flex mb-8">
-          <th class="w-1/3 flex overflow-wrap">
-            {{ $t("InterfaceConvertUnits.table.unit") }}
-          </th>
+        <table class="w-full">
+          <thead>
+            <tr class="flex mb-8">
+              <th class="w-1/3 flex overflow-wrap">
+                {{ $t("InterfaceConvertUnits.table.unit") }}
+              </th>
 
-          <th class="w-1/3 flex overflow-wrap">
-            {{ $t("InterfaceConvertUnits.table.amount") }}
-          </th>
-          
-          <th class="w-1/3 flex overflow-wrap">
-            {{ $t("InterfaceConvertUnits.table.amount.in.hbar") }}
-          </th>
-        </tr>
+              <th class="w-1/3 flex overflow-wrap">
+                {{ $t("InterfaceConvertUnits.table.amount") }}
+              </th>
+              
+              <th class="w-1/3 flex overflow-wrap">
+                {{ $t("InterfaceConvertUnits.table.amount.in.hbar") }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="unit in units"
+              :key="unit.name"
+              class="flex mb-8 border-b dark:border-b-silver-polish overflow-wrap"
+            >
+              <td class="w-1/3 flex overflow-wrap">
+                {{ unit.name }}
+              </td>
 
-        <tr
-          v-for="unit in units"
-          :key="unit.name"
-          class="flex mb-8 border-b dark:border-b-silver-polish overflow-wrap"
-        >
-          <td class="w-1/3 flex overflow-wrap">
-            {{ unit.name }}
-          </td>
-
-          <td class="w-1/3 flex overflow-wrap">
-            {{ unit.amount }} {{ unit.symbol }} 
-          </td>
-          
-          <td class="w-1/3 flex overflow-wrap">
-            {{ unit.amountInHbar }} ℏ
-          </td>
-        </tr>
+              <td class="w-1/3 flex overflow-wrap">
+                {{ unit.amount }} {{ unit.symbol }} 
+              </td>
+              
+              <td class="w-1/3 flex overflow-wrap">
+                {{ unit.amountInHbar }} ℏ
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

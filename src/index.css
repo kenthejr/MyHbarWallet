@@ -4,3 +4,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Modern print-color-adjust property */
+@media print {
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Test styles to verify print colors */
+  .test-print {
+    background-color: #4679D6; /* bright-navy-blue */
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid #39ba8b; /* mountain-meadow */
+  }
+}

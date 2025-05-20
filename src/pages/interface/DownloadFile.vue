@@ -38,25 +38,29 @@
       @close="closeModal"
     >
       <div class="table-auto mt-8 p-4">
-        <tr>
-          <td class="w-full">
-            {{ $t("InterfaceTransactionDetails.operator") }}
-          </td>
+        <table class="w-full">
+          <tbody>
+            <tr>
+              <td class="w-full">
+                {{ $t("InterfaceTransactionDetails.operator") }}
+              </td>
 
-          <td class>
-            {{ accountId?.toString() }}
-          </td>
-        </tr>
+              <td class>
+                {{ accountId?.toString() }}
+              </td>
+            </tr>
 
-        <tr>
-          <td class>
-            {{ $t("InterfaceTransactionDetails.estimate") }}
-          </td>
+            <tr>
+              <td class>
+                {{ $t("InterfaceTransactionDetails.estimate") }}
+              </td>
 
-          <td class>
-            {{ state.maxFee }}
-          </td>
-        </tr>
+              <td class>
+                {{ state.maxFee }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="mt-4 w-full text-center">

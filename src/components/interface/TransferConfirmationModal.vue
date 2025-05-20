@@ -6,15 +6,17 @@
   >
     <table class="m-2 table-fixed border-b dark:border-midnight-express text-center w-full">
       <thead class="border-b dark:border-midnight-express">
-        <th class="font-bold w-1/5 h-14">
-          {{ $t("InterfaceHomeSend.transfer.confirm.account") }}
-        </th>
-        <th class="font-bold w-2/5 h-12">
-          {{ $t("InterfaceHomeSend.transfer.confirm.token") }}
-        </th>
-        <th class="font-bold w-2/5 h-12">
-          {{ $t("InterfaceHomeSend.transfer.confirm.amount") }}
-        </th>
+        <tr>
+          <th class="font-bold w-1/5 h-14">
+            {{ $t("InterfaceHomeSend.transfer.confirm.account") }}
+          </th>
+          <th class="font-bold w-2/5 h-12">
+            {{ $t("InterfaceHomeSend.transfer.confirm.token") }}
+          </th>
+          <th class="font-bold w-2/5 h-12">
+            {{ $t("InterfaceHomeSend.transfer.confirm.amount") }}
+          </th>
+        </tr>
       </thead>
       <tbody>
         <tr
